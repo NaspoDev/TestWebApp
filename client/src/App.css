@@ -1,0 +1,9 @@
+/* App component css */
+.user-list-heading {
+  margin-top: 20px;
+}
+
+.user-list {
+  padding-left: 20px;
+  list-style: circle;
+}
