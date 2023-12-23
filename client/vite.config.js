@@ -7,7 +7,9 @@ export default defineConfig({
   // defining our proxy
   server: {
     proxy: {
-      "/api": "http://localhost:5000",
+      // Set this to the IP of your backend.
+      // During development you would set this to http://localhost:5000 for example.
+      "/api": "http://54.158.56.176", // aws vps running our node.js app.
     },
   },
 });
