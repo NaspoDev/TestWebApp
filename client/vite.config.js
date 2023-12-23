@@ -9,11 +9,7 @@ export default defineConfig({
     proxy: {
       // Set this to the IP of your backend.
       // During development you would set this to http://localhost:5000 for example.
-      "/api": {
-        target: "http://54.158.56.176", // aws vps running our node.js app.
-        changeOrigin: true,
-        secure: false,
-      },
+      "/api": "http://54.158.56.176", // aws vps running our node.js app.
     },
   },
 });
