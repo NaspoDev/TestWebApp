@@ -2,7 +2,7 @@
 
 import "./App.css";
 import { useEffect, useState } from "react";
-import { apiURL } from "./api";
+import apiURL from "./api";
 
 function App() {
   const [message, setMessage] = useState([]);
