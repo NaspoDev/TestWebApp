@@ -4,19 +4,16 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // defining our proxy
+  // Defining our development proxy.
+  // NOTE: Vite proxy is ONLY for the DEV SERVER! It does not build.
   server: {
-    proxy: {
-      // Set this to the IP of your backend.
-
-      /* 
-      In this example, my app is running on testwebapp.naspoapps.com, and the
-      backend will be running on api.testwebapp.naspoapps.com.
-      This means that testwebapp.naspoapps.com/api will point to api.testwebapp.naspoapps.com. 
-      */
-
-      // During development you would set this to http://localhost:5000 for example.
-      "/api": "https://api.testwebapp.naspoapps.com", // aws vps running our node.js app.
-    },
+    // *Commented out because we've created our own api router because this doesnt work in production. (see ./src/api.js)
+    // proxy: {
+    //   // Set this to the IP of your backend.
+    //   // http://clientlocalhost:port/api -> http://localhost:3000
+    //   "/api": {
+    //     target: "http://localhost:3000",
+    //   },
+    // },
   },
 });

@@ -2,6 +2,7 @@
 
 import "./App.css";
 import { useEffect, useState } from "react";
+import { apiURL } from "./api";
 
 function App() {
   const [message, setMessage] = useState([]);
@@ -10,12 +11,12 @@ function App() {
   // we don't have to define localhost:5000/ because we've set that as our proxy in package.json
   useEffect(() => {
     // fetching from the root of our api
-    fetch("/api")
+    fetch(`${apiURL}`)
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
 
     // fetching users from our api/users.
-    fetch("/api/users")
+    fetch(`${apiURL}/users`)
       .then((res) => res.json())
       .then((data) => {
         // setting a timeout just to simulate loading...

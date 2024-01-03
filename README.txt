@@ -12,8 +12,8 @@ client
 2. Create your React app: npx create-vite@latest ./
 
 server
-1. setup your server.js file
-2. setup your routes
+1. Setup your server.js file.
+2. Setup your routes.
 
 client
-1. add your proxy to the vite config.
+1. Setup your proxy. (Typically create your own proxy handler for production as vite config proxy is only for development. See api.js).
